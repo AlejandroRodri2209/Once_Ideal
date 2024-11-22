@@ -1,0 +1,1317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background: linear-gradient(90deg, rgb(6, 66, 116), rgb(27, 2, 39)); /* Gradiente suave de colores */
+color: #333; /* Color base para el texto */
+font-family: 'Arial', sans-serif; /* Fuente*/
+margin: 0;
+padding: 0;
+min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la página */
+}
+
+header {
+background: rgba(0, 0, 0, 0.7);  /* Fondo negro con transparencia */
+padding: 10px;
+color: white;
+border-bottom: 3px solid #f39c12; /* Línea naranja debajo del header */
+}
+
+/* Header container styles */
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+/* Logo y título */
+.logo-title {
+display: flex;
+align-items: center;
+}
+
+.logo {
+width: 100px;
+height: 100px;
+}
+/* Título dinámico */
+h1 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #FF5733, #C70039, #900C3F, #581845);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorAnimation 3s linear infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 87, 51, 0.7), 0 0 20px rgba(255, 87, 51, 0.5), 0 0 30px rgba(255, 87, 51, 0.3);
+}
+
+/* Color animation keyframes */
+@keyframes colorAnimation {
+  0% {
+      color: rgba(255, 87, 51, 1);
+      text-shadow: 100px 5px 200px rgba(200, 200, 217, 0.7), 0 0 20px rgba(255, 87, 51, 0.5), 0 0 30px rgba(255, 87, 51, 0.3);
+  }
+}
+/* Navbar de escritorio */
+.navbar {
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px 0;
+background-color: #333;
+border-radius: 5px;
+}
+
+.navbar li {
+list-style-type: none;
+}
+
+.nav-link {
+color: #fff;
+text-decoration: none;
+font-size: 1.2em;
+display: flex;
+align-items: center;
+padding: 10px;
+transition: color 0.3s ease;
+}
+
+.nav-link i {
+margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.nav-link:hover {
+color: #f39c12;
+}
+
+/* Menú móvil */
+.menu-toggle {
+display: none;
+}
+
+#mobile-nav {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+background-color: #333;
+width: 100%;
+height: 100vh;
+padding-top: 50px;
+animation: slideIn 0.3s ease-out;
+}
+
+#mobile-nav ul {
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#mobile-nav li {
+margin: 15px 0;
+}
+
+#mobile-nav a {
+font-size: 1.5em;
+color: #fff;
+text-decoration: none;
+padding: 10px 20px;
+display: flex;
+align-items: center;
+transition: color 0.3s ease;
+}
+
+#mobile-nav a:hover {
+color: #f39c12;
+}
+
+#menu-toggle:checked + #mobile-nav {
+display: block;
+}
+
+@keyframes slideIn {
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0);
+}
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 768px) {
+.menu-icon {
+  display: none;
+}
+}
+/* Navbar de escritorio */
+.navbar {
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px 0;
+border-radius: 5px;
+}
+
+.navbar li {
+list-style-type: none;
+}
+
+.nav-link {
+color: #fff;
+text-decoration: none;
+font-size: 1.2em;
+display: flex;
+align-items: center;
+padding: 10px;
+position: relative; /* Necesario para el pseudo-elemento del subrayado */
+transition: color 0.3s ease;
+}
+
+.nav-link i {
+margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+/* Eliminar subrayado tradicional y agregar efecto dinámico */
+.nav-link::before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: transparent;
+transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.nav-link:hover::before {
+background-color: #f39c12;  /* Color del subrayado */
+width: 100%;
+}
+
+.nav-link:hover {
+color: #f39c12; /* Color del texto en hover */
+}
+
+/* Menú móvil */
+.menu-toggle {
+display: none;
+}
+
+#mobile-nav {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+background-color: transparent;
+width: 100%;
+height: 100vh;
+padding-top: 50px;
+animation: slideIn 0.3s ease-out;
+}
+
+#mobile-nav ul {
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#mobile-nav li {
+margin: 15px 0;
+}
+
+#mobile-nav a {
+font-size: 1.5em;
+color: #fff;
+text-decoration: none;
+padding: 10px 20px;
+display: flex;
+align-items: center;
+position: relative;
+transition: color 0.3s ease;
+}
+
+/* Efecto hover para enlaces móviles */
+#mobile-nav a::before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: transparent;
+transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+#mobile-nav a:hover::before {
+background-color: #f39c12;
+width: 100%;
+}
+
+#mobile-nav a:hover {
+color: #f39c12;
+}
+
+#menu-toggle:checked + #mobile-nav {
+display: block;
+}
+
+@keyframes slideIn {
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0);
+}
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 768px) {
+.menu-icon {
+  display: none;
+}
+}
+
+/* Navbar de escritorio */
+.navbar {
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px 0;
+border-radius: 5px;
+}
+
+.navbar li {
+list-style-type: none;
+}
+
+.nav-link {
+color: #fff;
+text-decoration: none;
+font-size: 1.2em;
+display: flex;
+align-items: center;
+padding: 10px;
+position: relative; /* Necesario para el pseudo-elemento del subrayado */
+transition: color 0.3s ease;
+}
+
+.nav-link i {
+margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+/* Eliminar subrayado tradicional y agregar efecto dinámico */
+.nav-link::before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: transparent;
+transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.nav-link:hover::before {
+background-color: #f39c12;  /* Color del subrayado */
+width: 100%;
+}
+
+.nav-link:hover {
+color: #f39c12; /* Color del texto en hover */
+}
+
+/* Menú móvil */
+.menu-toggle {
+display: none;
+}
+
+#mobile-nav {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+background-color: transparent;
+width: 100%;
+height: 100vh;
+padding-top: 50px;
+animation: slideIn 0.3s ease-out;
+}
+
+#mobile-nav ul {
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#mobile-nav li {
+margin: 15px 0;
+}
+
+#mobile-nav a {
+font-size: 1.5em;
+color: #fff;
+text-decoration: none;
+padding: 10px 20px;
+display: flex;
+align-items: center;
+position: relative;
+transition: color 0.3s ease;
+}
+
+/* Efecto hover para enlaces móviles */
+#mobile-nav a::before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: transparent;
+transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+#mobile-nav a:hover::before {
+background-color: #f39c12;
+width: 100%;
+}
+
+#mobile-nav a:hover {
+color: #f39c12;
+}
+
+#menu-toggle:checked + #mobile-nav {
+display: block;
+}
+
+@keyframes slideIn {
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0);
+}
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 768px) {
+.menu-icon {
+  display: none;
+}
+}
+/* Navbar de escritorio */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: transparent; /* Asegura que no haya fondo negro */
+}
+
+.navbar li {
+  list-style-type: none;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none; /* Elimina el subrayado tradicional */
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative; /* Necesario para el pseudo-elemento del subrayado */
+  transition: color 0.3s ease;
+  background-color: transparent; /* Asegura que no haya fondo */
+}
+
+.nav-link i {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+/* Eliminar subrayado tradicional y agregar efecto dinámico */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  background-color: #f39c12;  /* Color del subrayado */
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #f39c12; /* Color del texto en hover */
+}
+
+/* Menú móvil */
+.menu-toggle {
+  display: none;
+}
+
+#mobile-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent; /* Asegura que el fondo sea transparente */
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  animation: slideIn 0.3s ease-out;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent; /* Asegura que el fondo sea transparente */
+}
+
+#mobile-nav li {
+  margin: 15px 0;
+}
+
+#mobile-nav a {
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none; /* Elimina el subrayado tradicional */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s ease;
+  background-color: transparent; /* Asegura que no haya fondo */
+}
+
+/* Efecto hover para enlaces móviles */
+#mobile-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+#mobile-nav a:hover::before {
+  background-color: #f39c12;
+  width: 100%;
+}
+
+#mobile-nav a:hover {
+  color: #f39c12;
+}
+
+#menu-toggle:checked + #mobile-nav {
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Estilos generales para los botones */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 800; /* Texto más grueso por defecto */
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  background-color: transparent; /* Fondo transparente por defecto */
+  color: white; /* Color blanco por defecto */
+  position: relative;
+}
+
+/* Efecto de contorno de fondo para los botones */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  background-color: rgba(146, 185, 37, 0.952); /* Fondo suave detrás del texto */
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+/* Estilos comunes para los botones */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 800; /* Hacer el texto más grueso por defecto */
+  text-align: center;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white; /* Color blanco */
+}
+
+/* Estilo por defecto para el botón de login */
+.btn-login {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  border: 2px solid #4CAF50;
+}
+
+/* Estilo por defecto para el botón de registro */
+.btn-register {
+  background-color: #2196F3; /* Azul */
+  color: white;
+  border: 2px solid #2196F3;
+}
+
+/* Efecto cuando el botón está inactivo (normal) */
+.btn:hover {
+  transform: scale(1.05);
+  color: white; /* Asegura que la letra sea blanca al hacer hover */
+  font-weight: 800; /* Mantener el texto grueso al hacer hover */
+}
+
+/* Efecto cuando el botón está activo (después de un clic o focus) */
+.btn:active {
+  transform: scale(0.98);
+  background-color: #333; /* Cambia a un fondo oscuro */
+  color: white; /* Mantiene el color blanco al hacer clic */
+  font-weight: 800; /* Mantiene el texto grueso al hacer clic */
+}
+
+/* Efecto cuando el botón tiene foco (cuando está seleccionado) */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6); /* Sombra azul suave */
+}
+
+/* Efecto al pasar el mouse sobre el botón de Login */
+.btn-login:hover {
+  background-color: #45a049; /* Cambio de tono verde */
+  border-color: #45a049;
+  color: white; /* Blanco al pasar el cursor sobre el botón de Login */
+  font-weight: 800; /* Texto más grueso */
+}
+
+/* Efecto al pasar el mouse sobre el botón de Registro */
+.btn-register:hover {
+  background-color: #1e88e5; /* Cambio de tono azul */
+  border-color: #1e88e5;
+  color: white; /* Blanco al pasar el cursor sobre el botón de Registro */
+  font-weight: 800; /* Texto más grueso */
+}
+
+
+
+/* Login y navbar */
+.login-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Formulario de login */
+.login-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow the inputs to wrap on small screens */
+}
+
+.login-form input {
+  padding: 5px;
+  font-size: 0.9rem;
+  width: 150px; /* Set a default width for inputs */
+}
+
+.login-form button {
+  padding: 5px 10px;
+  background-color: #1D3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #457B9D;
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-top: 10px; /* Separa el navbar del formulario de login */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Icono de menú hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Ocultar checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Mostrar el menú al hacer clic en el checkbox */
+#menu-toggle:checked + label + nav ul {
+  display: block;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .logo-title {
+      justify-content: center;
+  }
+
+  .login-navbar {
+      align-items: center;
+  }
+
+  .login-form {
+      justify-content: center;
+      width: 100%; /* Make the login form responsive */
+  }
+
+  .login-form input {
+      width: 80%; /* Adjust width of inputs */
+      font-size: 0.9rem; /* Keep font size consistent */
+  }
+
+  /* Navbar oculto por defecto en pantallas pequeñas */
+  nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+  }
+
+  /* Mostrar icono de hamburguesa en pantallas pequeñas */
+  .menu-icon {
+      display: block;
+  }
+}
+
+/* Ajustes para pantallas de 320px */
+@media (max-width: 320px) {
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  .logo {
+      width: 40px;
+      height: 40px;
+  }
+
+  .login-form input {
+      width: 100%; /* Full width on smaller screens */
+      font-size: 0.8rem;
+  }
+
+  .login-form button {
+      font-size: 0.8rem;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      margin-top: 5px;
+  }
+
+  .navbar li a {
+      font-size: 0.9rem;
+  }
+
+  .menu-icon {
+      font-size: 1.8rem;
+  }
+
+  .header-container {
+      padding: 5px;
+  }
+}
+
+
+
+
+/* Estilo carrusel */
+#carouselExampleCaptions {
+  max-width: 100%;
+  max-height: 700px; /* Aumenta la altura máxima del carrusel */
+  margin: 0 auto; /* Centrar el carrusel */
+  overflow: hidden; /* Ocultar cualquier desbordamiento de las imágenes */
+}
+
+/* Agregar un margen inferior para separar el carrusel del contenido */
+.container {
+  margin-top: 30px;
+}
+
+.carousel-inner img {
+  object-fit: cover; /* Las imágenes se ajustarán sin perder proporción */
+  width: 100%; /* Asegurar que ocupen todo el ancho */
+  height: 700px; /* Aumenta la altura del carrusel */
+}
+
+.carousel-inner {
+  display: flex; /* Colocar las imágenes una junto a la otra sin espacios */
+  overflow: hidden; /* Evitar el desbordamiento de las imágenes fuera del carrusel */
+}
+
+.carousel-item img {
+  flex-grow: 1; /* Hacer que las imágenes crezcan para ocupar todo el espacio disponible */
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Contenedor de las cartas */
+.container {
+padding: 40px 100px;
+max-width: 1200px;
+margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Grid para las noticias */
+.row {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+gap: 0px; /* Espacio entre las columnas y filas */
+justify-content: flex-start; /* Alinea las cartas al inicio de la fila */
+grid-auto-rows: auto; /* Asegura que las filas se ajusten automáticamente */
+}
+
+/* Estilo base para las cartas */
+.news-card, .video-card {
+position: relative;
+display: flex;
+flex-direction: column; /* Organiza los elementos de la carta de forma vertical */
+background-color: #692121; /* Fondo blanco para las cartas */
+border-radius: 40px; /* Bordes redondeados */
+border: 5px solid #f39c12; /* Aquí puedes ajustar el grosor del borde */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+margin: 0; /* Eliminar márgenes dentro de las cartas */
+}
+
+
+/* Efecto Hover */
+.news-card:hover, .video-card:hover {
+transform: translateY(-5px); /* Eleva la carta */
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Fondo con gradientes */
+.news-card, .video-card {
+background: linear-gradient(135deg, rgba(91, 11, 94, 0.9), rgba(31, 18, 5, 0.9)); /* Gradiente de colores cálidos */
+color: #fff;
+}
+
+
+/* Estilo del contenido dentro de las cartas */
+.news-card .card-body, .video-card .card-body {
+padding: 15px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+/* Estilo del título y texto */
+.news-card .card-body h2, .video-card .card-body h2 {
+font-size: 1.4rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.news-card .card-body p, .video-card .card-body p {
+font-size: 1rem;
+line-height: 1.5;
+margin-bottom: 15px;
+}
+
+/* Imagen dentro de las cartas */
+.news-card img, .video-card img {
+width: 100%;
+height: auto;
+border-radius: 15px 15px 0 0; /* Bordes redondeados arriba */
+object-fit: cover;
+}
+
+/* Botón dentro de las cartas */
+.news-card .btn, .video-card .btn {
+align-self: flex-start;
+padding: 10px 20px;
+background-color: #f39c12;
+color: #fff;
+border: none;
+border-radius: 30px;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.news-card .btn:hover, .video-card .btn:hover {
+background-color: #d88e09; /* Color más oscuro al hacer hover */
+}
+
+/* Video iframe */
+.embed-responsive {
+position: relative;
+display: block;
+height: 0;
+padding: 0;
+overflow: hidden;
+padding-top: 56.25%; /* Relación 16:9 */
+}
+
+.embed-responsive-item {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+/* Estilos específicos para las cartas de video */
+.video-card {
+width: 50%;
+margin: 0 auto; /* Centra las cartas de video */
+}
+
+.video-card .card-body {
+padding: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+.row {
+  grid-template-columns: repeat(2, 1fr); /* En pantallas más pequeñas, 2 columnas */
+  gap: 15px; /* Se ajusta el espacio entre las cartas */
+}
+
+/* Para centrar las cartas de video en dispositivos más pequeños */
+.video-card {
+  width: 80%; /* Las cartas de video ocuparán más espacio en pantallas pequeñas */
+  margin: 0 auto;
+}
+}
+
+@media (max-width: 480px) {
+.row {
+  grid-template-columns: 1fr; /* En móviles, 1 columna */
+  gap: 10px; /* Espacio reducido en dispositivos móviles */
+}
+
+/* Asegura que las cartas de video sigan centradas en pantallas pequeñas */
+.video-card {
+  width: 90%; /* Aumenta el ancho en pantallas aún más pequeñas */
+  margin: 0 auto;
+}
+}
+
+/* Título 'Últimas Noticias' */
+h2.text-center {
+color: #FF6347; /* Color coral vibrante */
+font-weight: bold; /* Hacerlo más destacado */
+transition: transform 0.3s ease, text-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+h2.text-center:hover {
+transform: scale(1.1) rotate(-3deg); /* Aumentar tamaño y rotar ligeramente */
+text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para un efecto 3D */
+}
+
+
+.card-title {
+color: #2F2F2F !important; /* Gris oscuro para los títulos de las noticias (Sentencia Important debido a que no se aplica este estilo originalmente)  */
+}
+
+
+/* Descripción de las noticias y videos (card-text) */
+.card-text {
+color: #333333; /* Gris oscuro para un texto legible pero suave */
+}
+
+/* Botones en las tarjetas */
+.btn-primary {
+background-color: #007BFF; /* Azul brillante */
+border-color: #0056b3; /* Azul más oscuro para el borde */
+}
+
+.btn-primary:hover {
+background-color: #0056b3; /* Efecto hover con un azul más oscuro */
+}
+
+/* Estilo para los títulos de la sección 'Videos Destacados' */
+h2.text-center.mt-5 {
+color: #FF6347; /* Mismo color coral para consistencia */
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+.map-section, .social-section, .survey-section {
+  flex: 1;
+  min-width: 300px; /* Ancho mínimo */
+  margin: 10px;
+  padding: 15px;
+  background-color: #457B9D; /* Fondo de secciones */
+  border-radius: 8px;
+}
+
+
+/* Títulos */
+h1 {
+  text-align: center;
+  color: #1D3557; /* Color del texto */
+}
+
+/* Estilos del formulario */
+.survey-form {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columnas */
+}
+
+label {
+  margin-top: 15px; /* Espacio entre etiquetas y campos */
+}
+
+input[type="email"],
+textarea {
+  padding: 10px; /* Espacio interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border: 1px solid #A8DADC; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+textarea {
+  resize: vertical; /* Permite cambiar el tamaño verticalmente */
+  min-height: 100px; /* Altura mínima */
+}
+
+/* Estilo del botón */
+button {
+  margin-top: 20px; /* Espacio encima del botón */
+  padding: 10px;
+  background-color: #1D3557; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano al pasar */
+}
+
+button:hover {
+  background-color: #457B9D; /* Color al pasar el cursor */
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Estilos responsivos */
+@media (max-width: 320px) {
+  .survey-container {
+      width: 90%; /* Ancho completo en pantallas pequeñas */
+  }
+}
+
+/* Ajustes para pantallas de 320px */
+@media (max-width: 320px) {
+h1 {
+    font-size: 1.2rem; /* Reduce el tamaño del título */
+}
+
+.logo {
+    width: 40px;
+    height: 40px; /* Reduces el tamaño del logo para que sea más pequeño */
+}
+
+.login-form input {
+    width: 100%; /* Haz que los inputs ocupen el 100% del ancho */
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente en los inputs */
+}
+
+.login-form button {
+    font-size: 0.8rem; /* Reducir el tamaño del botón */
+    padding: 8px 12px; /* Reducir el padding para el botón */
+}
+
+nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 5px; /* Menor margen entre elementos */
+}
+
+.navbar li a {
+    font-size: 0.9rem; /* Reducir el tamaño de las fuentes en el menú */
+}
+
+.menu-icon {
+    font-size: 1.8rem; /* Ajusta el tamaño del ícono del menú para pantallas pequeñas */
+}
+
+.header-container {
+    padding: 5px; /* Reduce el padding para ahorrar espacio */
+}
+
+.footer-container {
+    flex-direction: column; /* Organiza las secciones del footer en columna */
+}
+
+.footer-container .map-section,
+.footer-container .social-section,
+.footer-container .survey-section {
+    min-width: 90%; /* Las secciones deben ser casi de ancho completo */
+    margin: 5px 0; /* Reduce el margen entre las secciones del footer */
+}
+
+.survey-container {
+    width: 90%; /* Formulario de encuesta ocupa casi el 100% del ancho */
+    padding: 15px; /* Reduce el padding dentro del formulario */
+}
+
+.survey-form input[type="email"],
+.survey-form textarea {
+    font-size: 0.8rem; /* Ajusta el tamaño de la fuente de los inputs */
+}
+
+/* Asegúrate de que los botones también sean más pequeños */
+.survey-form button {
+    font-size: 0.8rem; /* Reduce el tamaño del botón */
+    padding: 10px;
+}
+}
+
+
+
+
+/* Estilos generales del footer */
+footer {
+  background-color: #2c3e50; /* Fondo oscuro para el footer */
+  color: white; /* Texto blanco */
+  padding: 40px 0; /* Espaciado alrededor */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Acomoda las secciones en fila */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: wrap; /* Asegura que las secciones se acomoden correctamente en pantallas pequeñas */
+}
+
+/* Sección de Ubicación */
+.map-section {
+  flex: 1 1 30%; /* La sección del mapa ocupa el 30% */
+  text-align: center;
+}
+
+.map-section iframe {
+  border: 0;
+  border-radius: 8px;
+  max-width: 100%; /* Asegura que el iframe no se desborde */
+}
+
+/* Sección de Redes Sociales */
+.social-section {
+  flex: 1 1 30%; /* La sección de redes sociales ocupa el 30% */
+  text-align: center;
+}
+
+.social-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #3498db; /* Color al pasar el cursor */
+}
+
+/* Sección de Encuesta de Satisfacción */
+.survey-container {
+  flex: 1 1 30%; /* La sección de encuesta ocupa el 30% */
+  background-color: #34495e; /* Fondo ligeramente más oscuro */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.survey-container h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.survey-form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.survey-form input, .survey-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.survey-form input[type="email"] {
+  width: 100%;
+}
+
+.survey-form textarea {
+  width: 100%;
+  height: 120px;
+}
+
+.survey-form button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.survey-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para el checkbox de suscripción */
+.subscription {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-label {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.checkbox-label input {
+  accent-color: #3498db;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .map-section, .social-section, .survey-container {
+      flex: 1 1 100%; /* Cada sección ocupa el 100% del ancho en pantallas pequeñas */
+      text-align: center;
+  }
+
+  .map-section iframe {
+      width: 100%;
+      height: 200px;
+  }
+
+  .social-media {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .survey-container {
+      width: 100%;
+  }
+}

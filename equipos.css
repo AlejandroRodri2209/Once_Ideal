@@ -1,0 +1,566 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(90deg, rgb(6, 66, 116), rgb(27, 2, 39));
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Header fijo con fondo transparente */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    border-bottom: 2px solid #f39c12;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+/* Animación de aparición para el header */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Título con gradiente dinámico */
+h1 {
+    font-size: 5vw; /* Usamos unidades de vw para que sea más flexible */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: colorChange 5s infinite alternate;
+    background: linear-gradient(45deg, #ff4c4c, #ff0000, #ff6666);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    flex-grow: 1;
+    padding-left: 200px; /* Ajustamos el padding izquierdo */
+    transition: font-size 0.3s ease; /* Añadimos transición */
+}
+
+/* Animación para el cambio de color del título */
+@keyframes colorChange {
+    0% { color: #ff4c4c; }
+    50% { color: #ff0000; }
+    100% { color: #ff6666; }
+}
+
+/* Logo pequeño ajustado */
+.header-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 50px;
+    animation: logoAnimation 1s ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.navbar li {
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px; /* Más espacio entre las opciones */
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover para enlaces */
+.nav-link:hover {
+    color: #f39c12;
+}
+
+/* Estilo de la línea naranja en todas las opciones */
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.navbar .nav-link:hover::before {
+    background-color: #f39c12;
+    width: 100%;
+}
+
+/* Estilos del menú de hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+#mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro para que resalte */
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+    animation: slideIn 0.3s ease-out;
+}
+
+#mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mobile-nav li {
+    margin: 20px 0;
+}
+
+#mobile-nav a {
+    font-size: 1.5em;
+    color: #28a745; /* Color verde para el texto del menú */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+/* Animación para el menú desplegable */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de los iconos en el menú móvil */
+#mobile-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+#mobile-nav a:hover::before {
+    background-color: #f39c12;
+    width: 100%;
+}
+
+#menu-toggle:checked + #mobile-nav {
+    display: block;
+}
+
+/* Responsividad - Menú de hamburguesa */
+@media (max-width: 767px) {
+    .navbar {
+        display: none; /* Ocultar el navbar por defecto en móviles */
+    }
+    
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú */
+        cursor: pointer;
+    }
+    
+    #mobile-nav {
+        display: none; /* Inicialmente oculto */
+    }
+
+    #mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-toggler-icon {
+        width: 35px;
+        height: 35px;
+        background-color: #f39c12;
+        border-radius: 5px;
+    }
+}
+
+/* Navbar en pantallas grandes */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Ocultar el botón de menú en pantallas grandes */
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar li {
+        margin: 0 20px; /* Separar más las opciones */
+    }
+
+    /* Aseguramos que la línea naranja aparezca debajo de todas las opciones */
+    .navbar .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: transparent;
+        transition: background-color 0.3s ease, width 0.3s ease;
+    }
+
+    .navbar .nav-link:hover::before {
+        background-color: #f39c12;
+        width: 100%;
+    }
+}
+
+/* Centrado del título en pantallas pequeñas */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 8vw; /* Ajustamos el tamaño del título en pantallas pequeñas */
+        padding-left: 0; /* Quitamos el padding izquierdo en móviles */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo del logo */
+.header-logo {
+    width: 60px;  /* Reduce el tamaño del logo */
+    height: auto;  /* Mantiene la proporción original */
+    margin-right: 20px; /* Agrega un poco de espacio entre el logo y el título (si es necesario) */
+    animation: logoAnimation 1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+        /* Contenedor de las secciones */
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Título principal */
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        /* Estilo para las tarjetas */
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Efecto de elevación */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease;
+            filter: brightness(90%);
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.05); /* Efecto zoom sobre las imágenes */
+            filter: brightness(100%);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-transform: capitalize;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Sección de las tarjetas */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .col {
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para la responsividad */
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 100%; /* Las tarjetas se apilan en pantallas pequeñas */
+                max-width: 100%;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Diseño para la sección de equipos */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid para los equipos */
+.equipos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px;
+}
+
+/* Estilos de los items de equipo */
+.equipo-item {
+    text-align: center;
+    background-color: #F1FAEE;
+    border-radius: 15px; /* Bordes más redondeados */
+    overflow: hidden; /* Para que la imagen no sobresalga */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación al pasar el cursor */
+}
+
+.equipo-item:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el cursor */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* Sombra más profunda al pasar el cursor */
+}
+
+/* Asegurarse de que las imágenes de los equipos tengan el mismo tamaño */
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Fija la altura de las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
+}
+
+/* Opcional: Puedes ajustar la altura si lo deseas */
+.card {
+    overflow: hidden; /* Evita que el contenido sobresalga de la tarjeta */
+}
+
+.equipo-item img {
+    width: 100%; /* Imagenes de equipo ocupan el 100% del contenedor */
+    height: 150px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+}
+
+.equipo-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #1D3557; /* Color del título */
+}
+
+.equipo-item p {
+    font-size: 1rem;
+    color: #333; /* Color de texto más oscuro para mejor legibilidad */
+    padding: 0 15px; /* Espaciado lateral */
+}
+
+footer {
+    background-color: #1D3557; /* Color de fondo */
+    color: #F1FAEE; /* Color del texto */
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.map-section, .social-section, .survey-section {
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo */
+    margin: 10px;
+    padding: 15px;
+    background-color: #457B9D; /* Fondo de secciones */
+    border-radius: 8px;
+}
+
+.map-iframe {
+    border: 2px solid #F1FAEE; /* Borde del mapa */
+    border-radius: 8px; /* Esquinas redondeadas */
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon {
+    color: #F1FAEE; /* Color de enlaces */
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #A8DADC; /* Fondo al pasar el cursor */
+    border: 1px solid #F1FAEE; /* Borde al pasar el cursor */
+}
+
+/* Contenedor del formulario */
+.survey-container {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 50px auto; /* Centra el formulario en la página */
+    padding: 20px;
+    background-color: white; /* Color de fondo del formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #1D3557; /* Color del texto */
+}
+
+/* Estilos del formulario */
+.survey-form {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columnas */
+}
+
+label {
+    margin-top: 15px; /* Espacio entre etiquetas y campos */
+}
+
+input[type="email"],
+textarea {
+    padding: 10px; /* Espacio interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    border: 1px solid #A8DADC; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+textarea {
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    min-height: 100px; /* Altura mínima */
+}
+
+/* Estilo del botón */
+button {
+    margin-top: 20px; /* Espacio encima del botón */
+    padding: 10px;
+    background-color: #1D3557; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar */
+}
+
+button:hover {
+    background-color: #457B9D; /* Color al pasar el cursor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 320px) {
+    .survey-container {
+        width: 90%; /* Ancho completo en pantallas pequeñas */
+    }
+}

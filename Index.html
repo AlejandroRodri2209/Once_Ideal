@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Once Inicial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <a href="index.html">
+                    <img src="Imagenes Index/Logo Principal.png" alt="Logo" class="logo">
+                </a>
+                <h1>Once Inicial</h1>
+            </div>
+           
+            <div class="login-navbar">
+                <div class="login-form">
+                    <!-- Cambiar el botón a un enlace -->
+                    <a href="login.html" class="btn btn-login">Acceder</a>
+                    <!-- Botón para abrir el modal de registro -->
+                    <a href="register.html" class="btn btn-register">Registrarse</a>
+                </div>
+                <input type="checkbox" id="menu-toggle">
+         <!-- Menú para escritorio -->
+<label for="menu-toggle" class="menu-icon d-md-none">&#9776;</label>
+<nav class="d-none d-md-block">
+  <ul class="navbar d-flex list-unstyled mb-0">
+    <li><a href="ligas.html" class="nav-link text-light"><i class="fas fa-trophy"></i> Ligas</a></li>
+    <li><a href="equipos.html" class="nav-link text-light"><i class="fas fa-users"></i> Equipos</a></li>
+    <li><a href="partidos.html" class="nav-link text-light"><i class="fas fa-futbol"></i> Partidos</a></li>
+    <li><a href="contacto.html" class="nav-link text-light"><i class="fas fa-envelope"></i> Contacto</a></li>
+  </ul>
+</nav>
+ 
+<!-- Menú desplegable para dispositivos móviles -->
+<input type="checkbox" id="menu-toggle" class="menu-toggle d-md-none">
+<nav id="mobile-nav" class="d-md-none">
+  <ul class="navbar list-unstyled ps-0">
+    <li><a href="ligas.html" class="nav-link text-dark"><i class="fas fa-trophy"></i> Ligas</a></li>
+    <li><a href="equipos.html" class="nav-link text-dark"><i class="fas fa-users"></i> Equipos</a></li>
+    <li><a href="partidos.html" class="nav-link text-dark"><i class="fas fa-futbol"></i> Partidos</a></li>
+    <li><a href="contacto.html" class="nav-link text-dark"><i class="fas fa-envelope"></i> Contacto</a></li>
+  </ul>
+</nav>
+ 
+<!-- Agrega los iconos de Font Awesome (o cualquier librería de iconos a nuestra eleccion) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+ 
+ 
+            </div>
+ 
+ 
+ 
+            <!-- Modal de Registro -->
+            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+        </div>
+    </header>
+        </div>
+    </div>
+</div>
+ 
+ 
+    <!-- Inicio del carrusel de Bootstrap -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Imagenes Index/Carrusel 1.jpg" class="d-block w-100" alt="Carrusel 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>James Rodriguez</h5>
+                    <p>Futbolista de dia, Tombo de noche.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Imagenes Index/Carrusel 2.jpg" class="d-block w-100" alt="Carrusel 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Cristiano Ronaldo</h5>
+                    <p>Gigante del fútbol mundial.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Imagenes Index/Carrusel 3.jpg" class="d-block w-100" alt="Carrusel 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>El mejor futbolista de todos los tiempos</h5>
+                    <p>Antony.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Fin del carrusel -->
+ 
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Últimas Noticias</h2>
+        <!-- Filtro de Noticias -->
+        <div class="mb-4">
+            <div class="btn-group" role="group" aria-label="Filtro de Noticias">
+                <button type="button" class="btn btn-secondary" onclick="filterNews('todos')">Todos</button>
+                <button type="button" class="btn btn-secondary" onclick="filterNews('nacionales')">Nacionales</button>
+                <button type="button" class="btn btn-secondary" onclick="filterNews('premier')">Premier Ligue</button>
+                <button type="button" class="btn btn-secondary" onclick="filterNews('tendencias')">Tendencias</button>
+            </div>
+        </div>
+        <div class="row" id="news-container">
+ 
+<!-- Card 1 -->
+<div class="col-md-4 news-card" data-category="nacionales">
+    <div class="card">
+        <img src="Imagenes Index/Noticia4.jpeg" class="card-img-top" alt="Selección Colombia Irreconocible">
+        <div class="card-body">
+            <h5 class="card-title">Una selección Colombia irreconocible</h5>
+            <p class="card-text">La selección Colombia ha pasado por cambios significativos, y hoy en día muchos aficionados sienten que ya no es el equipo que solía deslumbrar en la cancha.</p>
+            <div class="card-text extra-content" id="extra-content-7" style="display: none;">
+                <p>Desde la finalizacion de la copa america 2024, las eliminatorias para el mundial 2026 de colombian han dejado bastante que desear, donde en 4 partidos disputados, han ganado 1 y perdido 3, quedando actualmente cuartos en la tabla de clasificacion. ¿Logrará este grupo de jóvenes y veteranos encontrar la fórmula del éxito en las eliminatorias?</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(7)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 2 -->
+<div class="col-md-4 news-card" data-category="premier">
+    <div class="card">
+        <img src="Imagenes Index/Noticia6.jpeg" class="card-img-top" alt="Lucha en la Premier League">
+        <div class="card-body">
+            <h5 class="card-title">Lucha en la Premier, ¿habrá nuevo campeón?</h5>
+            <p class="card-text">La Premier League está más competitiva que nunca. Con nuevos contendientes en la pelea, la pregunta en el aire es si habrá un nuevo campeón al final de la temporada.</p>
+            <div class="card-text extra-content" id="extra-content-8" style="display: none;">
+                <p>Equipos como el Manchester City, Arsenal y Liverpool se encuentran en la lucha por el título, pero esta temporada varios clubes han mostrado mejoras sorprendentes. El Newcastle United y el Aston Villa han saltado a la escena como equipos fuertes que pueden alterar el equilibrio de poder. ¿Será esta la temporada en la que un nuevo campeón se corona en Inglaterra, o los tradicionales gigantes seguirán dominando el campeonato?</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(8)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 3 -->
+<div class="col-md-4 news-card" data-category="tendencias">
+    <div class="card">
+        <img src="Imagenes Index/lamine.jpg" class="card-img-top" alt="Lamine Yamal">
+        <div class="card-body">
+            <h5 class="card-title">Lamine Yamal sigue ausente</h5>
+            <p class="card-text">Lamine Yamal, uno de los jugadores más prometedores del Barcelona, sigue sin aparecer en el campo debido a una serie de problemas físicos y tácticos.</p>
+            <div class="card-text extra-content" id="extra-content-9" style="display: none;">
+                <p>Tras una temporada llena de expectativas, Yamal se ha visto afectado por lesiones que han retrasado su debut en partidos cruciales. A pesar de su gran potencial, el técnico Xavi Hernández prefiere ser cauteloso con su integración al equipo titular. Los aficionados del Barcelona esperan ver pronto a este joven talento en acción, pero la incertidumbre sobre su estado físico y su adaptación al sistema táctico sigue siendo un tema de conversación.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(9)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 4 -->
+<div class="col-md-4 news-card" data-category="tendencias">
+    <div class="card">
+        <img src="Imagenes Index/barcelona.jpg" class="card-img-top" alt="Barcelona expectativas">
+        <div class="card-body">
+            <h5 class="card-title">¿El Barcelona logrará cumplir las expectativas?</h5>
+            <p class="card-text">El Barcelona ha hecho grandes movimientos en el mercado, pero aún se enfrenta a grandes retos para cumplir con las altas expectativas que tienen los aficionados.</p>
+            <div class="card-text extra-content" id="extra-content-10" style="display: none;">
+                <p>Después de una temporada complicada, el Barcelona ha apostado por una nueva generación de jugadores jóvenes y algunos fichajes importantes. Sin embargo, aún no logran encontrar su forma ideal en la Liga. Las expectativas siguen siendo altas, tanto por parte de los aficionados como por la directiva, que exige resultados rápidos. ¿Será esta la temporada en la que el Barcelona regrese a la cima del fútbol europeo, o seguirán luchando con las dificultades internas y externas?</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(10)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 5 -->
+<div class="col-md-4 news-card" data-category="internacionales">
+    <div class="card">
+        <img src="Imagenes Index/mbappe.jpg" class="card-img-top" alt="Mbappé en el Real Madrid">
+        <div class="card-body">
+            <h5 class="card-title">¿Mbappé logrará adaptarse al Real Madrid?</h5>
+            <p class="card-text">Kylian Mbappé está viviendo una nueva etapa en su carrera, ahora en el Real Madrid, y la pregunta es si podrá adaptarse rápidamente al estilo del equipo merengue.</p>
+            <div class="card-text extra-content" id="extra-content-11" style="display: none;">
+                <p>Después de varias temporadas brillando en el PSG, Mbappé se enfrenta a un nuevo reto en su carrera: adaptarse a la dinámica de uno de los equipos más grandes del mundo. A pesar de su indiscutible talento, su integración al equipo madridista no está siendo tan fácil como se esperaba. Los cambios tácticos y las grandes expectativas pueden presionar al delantero francés, quien tendrá que demostrar que puede llevar al Real Madrid al éxito en la Liga y la Champions League.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(11)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 6 -->
+<div class="col-md-4 news-card" data-category="internacionales">
+    <div class="card">
+        <img src="Imagenes Index/partidazo.jpg" class="card-img-top" alt="Clásico Italiano">
+        <div class="card-body">
+            <h5 class="card-title">Partidazo en el Clásico Italiano</h5>
+            <p class="card-text">El Clásico Italiano se perfila como uno de los partidos más emocionantes de la temporada, con la Juventus y el Inter de Milán luchando por la supremacía en la Serie A.</p>
+            <div class="card-text extra-content" id="extra-content-12" style="display: none;">
+                <p>El próximo enfrentamiento entre la Juventus y el Inter promete ser una verdadera batalla, ya que ambos equipos llegan en excelente forma. La Juventus, con su sólida defensa y experiencia, se enfrenta a un Inter lleno de talento joven y dinamismo. Los aficionados esperan un partido lleno de emociones, con el liderazgo de jugadores clave como Vlahovic en la Juve y Lautaro Martínez en el Inter. ¿Quién saldrá vencedor en este clásico histórico y cómo influirá en la lucha por el título de la Serie A?</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(12)">Leer más</button>
+        </div>
+    </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+       <!-- Card 1 -->
+<div class="col-md-4 news-card" data-category="nacionales">
+    <div class="card">
+        <img src="Imagenes Index/Noticia1.jpeg" class="card-img-top" alt="James Rodríguez">
+        <div class="card-body">
+            <h5 class="card-title">James Rodríguez sigue sin encontrar su lugar</h5>
+            <p class="card-text">James Rodríguez, el talentoso mediocampista colombiano, sigue buscando su mejor rendimiento en los clubes donde ha jugado últimamente. A pesar de su indiscutible talento, las lesiones y los cambios constantes de equipo han afectado su continuidad.</p>
+            <div class="card-text extra-content" id="extra-content-1" style="display: none;">
+                <p>James ha pasado por varias temporadas difíciles, tanto en el Bayern de Múnich como en el Everton, pero su situación actual en el fútbol turco no parece mejorar. Los aficionados esperan verlo en su mejor forma, pero las incógnitas sobre su futuro continúan. Algunos expertos creen que un cambio de aires podría ser la clave para que retome su nivel.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(1)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 2 -->
+<div class="col-md-4 news-card" data-category="premier">
+    <div class="card">
+        <img src="Imagenes Index/Noticia2.jpeg" class="card-img-top" alt="Jhon Durán">
+        <div class="card-body">
+            <h5 class="card-title">Jhon Durán, el suplente estrella</h5>
+            <p class="card-text">El delantero colombiano Jhon Durán ha sido una de las sorpresas más agradables de la Premier League, destacándose como un jugador de impacto inmediato, incluso desde el banquillo.</p>
+            <div class="card-text extra-content" id="extra-content-2" style="display: none;">
+                <p>Durán llegó al Aston Villa con grandes expectativas, pero fue a partir de su rol como suplente cuando realmente mostró su capacidad para cambiar los partidos. Con su potencia física y habilidad para desmarcarse, se ha convertido en un recurso valioso para su equipo. Su futuro en la Premier parece prometedor, y los aficionados colombianos esperan verlo como titular pronto.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(2)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 3 -->
+<div class="col-md-4 news-card" data-category="tendencias">
+    <div class="card">
+        <img src="Imagenes Index/Noticia3.jpeg" class="card-img-top" alt="Lesión de Carvajal">
+        <div class="card-body">
+            <h5 class="card-title">Dura lesión de Carvajal</h5>
+            <p class="card-text">El defensor del Real Madrid, Dani Carvajal, ha sufrido una lesión preocupante que podría dejarlo fuera de acción durante varias semanas.</p>
+            <div class="card-text extra-content" id="extra-content-3" style="display: none;">
+                <p>La lesión ocurrió durante un partido crucial de la liga española, cuando Carvajal intentaba disputar un balón aéreo. Las primeras evaluaciones indican que podría tratarse de una distensión muscular en su pierna derecha, lo que le obligaría a pasar por un proceso de rehabilitación. Su ausencia en el equipo será significativa, ya que es uno de los jugadores más experimentados en la defensa merengue.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(3)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 4 -->
+<div class="col-md-4 news-card" data-category="tendencias">
+    <div class="card">
+        <img src="Imagenes Index/Noticia4.jpeg" class="card-img-top" alt="Selección Colombia">
+        <div class="card-body">
+            <h5 class="card-title">Próximos partidos de la selección Colombia</h5>
+            <p class="card-text">La selección Colombia de fútbol se prepara para una serie de partidos decisivos en las eliminatorias para el próximo Mundial.</p>
+            <div class="card-text extra-content" id="extra-content-4" style="display: none;">
+                <p>Colombia enfrentará a varias selecciones de peso, y el entrenador Néstor Lorenzo tiene la difícil tarea de escoger a los jugadores que mejor se adapten a su estrategia. Con un grupo de jugadores jóvenes y algunos veteranos, se espera que los partidos próximos definan el rumbo de la clasificación. Los aficionados colombianos están ansiosos por ver a su selección en acción, especialmente con la nueva generación de futbolistas que promete mucho.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(4)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 5 -->
+<div class="col-md-4 news-card" data-category="tendencias">
+    <div class="card">
+        <img src="Imagenes Index/Noticia5.jpeg" class="card-img-top" alt="Cristiano Ronaldo">
+        <div class="card-body">
+            <h5 class="card-title">El máximo goleador de la historia: CR7</h5>
+            <p class="card-text">Cristiano Ronaldo continúa rompiendo récords y recientemente se coronó como el máximo goleador de la historia del fútbol mundial.</p>
+            <div class="card-text extra-content" id="extra-content-5" style="display: none;">
+                <p>Con su reciente gol en la clasificación mundialista, Ronaldo alcanzó un hito histórico al superar a Josef Bican como el máximo goleador de todos los tiempos. Con más de 800 goles en su carrera, el portugués sigue demostrando su excepcional capacidad y hambre de éxito. A sus 39 años, continúa siendo un líder tanto en su selección como en su club, el Al Nassr de Arabia Saudita, y no parece tener intención de retirarse pronto.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(5)">Leer más</button>
+        </div>
+    </div>
+</div>
+<!-- Card 6 -->
+<div class="col-md-4 news-card" data-category="tendencias">
+    <div class="card">
+        <img src="Imagenes Index/Noticia6.jpeg" class="card-img-top" alt="Nottingham Forest vs Manchester United">
+        <div class="card-body">
+            <h5 class="card-title">El Nottingham Forest le daña la victoria al United</h5>
+            <p class="card-text">En un sorprendente giro de los acontecimientos, el Nottingham Forest logró un empate agónico contra el Manchester United, dejando escapar una victoria casi asegurada por los Red Devils.</p>
+            <div class="card-text extra-content" id="extra-content-6" style="display: none;">
+                <p>El Manchester United dominaba el partido con un gol de ventaja hasta los últimos minutos, cuando un penalti polémico permitió al Nottingham Forest igualar el marcador. Esta situación ha generado muchas críticas hacia la defensa del United, que no supo gestionar la ventaja en los minutos finales. Los aficionados y expertos en fútbol están debatiendo las decisiones tácticas de Erik Ten Hag, entrenador del United, y si esto afectará el rendimiento del equipo en la temporada.</p>
+            </div>
+            <button class="btn btn-primary" onclick="toggleContent(6)">Leer más</button>
+        </div>
+    </div>
+</div>
+ 
+ 
+        <h2 class="text-center mb-4 mt-5">Videos Destacados</h2>
+        <!-- Filtro de Videos -->
+        <div class="mb-4">
+            <div class="btn-group" role="group" aria-label="Filtro de Videos">
+                <button type="button" class="btn btn-secondary" onclick="filterVideos('todos')">Todos</button>
+                <button type="button" class="btn btn-secondary" onclick="filterVideos('nacionales')">Nacionales</button>
+                <button type="button" class="btn btn-secondary" onclick="filterVideos('premier')">Premier Ligue</button>
+                <button type="button" class="btn btn-secondary" onclick="filterVideos('tendencias')">Tendencias</button>
+            </div>
+        </div>
+        <div class="row" id="videos-container">
+            <!-- Video Card 1 -->
+            <div class="col-md-4 video-card" data-category="nacionales">
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" controls>
+                            <source src="Videos Index/Antony.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Antony Goat</h5>
+                        <p class="card-text">EL mejor.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Card 2 -->
+            <div class="col-md-4 video-card" data-category="premier">
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" controls>
+                            <source src="Videos Index/Goats.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Goats</h5>
+                        <p class="card-text">La elite de la elite.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Card 3 -->
+            <div class="col-md-4 video-card" data-category="tendencias">
+                <div class="card">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" controls>
+                            <source src="path/to/your/video3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Video 3</h5>
+                        <p class="card-text">Vivamus at est vitae libero vehicula.</p>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <!-- Sección de Ubicación -->
+            <div class="map-section">
+                <h3>Ubicación</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.66780327867!2d2.0576163180956293!3d41.39263843524652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sco!4v1729113534119!5m2!1ses!2sco"
+                    width="100%" height="200" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+   
+            <!-- Sección de Redes Sociales -->
+            <div class="social-section">
+                <h3>Síguenos en Redes Sociales</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="bi bi-twitter"></i> Twitter</a>
+                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#" class="social-icon"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+   
+            <!-- Sección de Encuesta de Satisfacción -->
+            <div class="survey-container">
+                <h3>Encuesta de Satisfacción</h3>
+                <form class="survey-form">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="Ingresa tu correo" required>
+   
+                    <label for="feedback">Comentarios:</label>
+                    <textarea id="feedback" placeholder="Escribe tus comentarios aquí..." required></textarea>
+   
+                    <div class="subscription">
+                        <p>Quiero suscribirme para recibir novedades.</p>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="subscribe"> Sí, deseo suscribirme
+                        </label>
+                    </div>
+   
+                    <button type="submit">Enviar</button>
+                </form>
+ 
+            </div>
+ 
+           
+        </div>
+    </footer>
+   
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleContent(cardNumber) {
+            const extraContent = document.getElementById(`extra-content-${cardNumber}`);
+            extraContent.style.display = (extraContent.style.display === 'none') ? 'block' : 'none';
+        }
+ 
+        function filterNews(category) {
+            const newsCards = document.querySelectorAll('.news-card');
+            newsCards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+ 
+        function filterVideos(category) {
+            const videoCards = document.querySelectorAll('.video-card');
+            videoCards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+ 
+          // Mostrar/Ocultar el menú móvil
+          const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        menuToggle.addEventListener('change', function() {
+            mobileNav.style.display = menuToggle.checked ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
+ 

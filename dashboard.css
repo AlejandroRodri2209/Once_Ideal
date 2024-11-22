@@ -1,0 +1,200 @@
+/* Barra de navegación */
+.navbar {
+    background-color: #343a40; /* Color oscuro para la barra de navegación */
+}
+
+.navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-brand:hover {
+    color: #28a745; /* Efecto hover en el logo */
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: #1a1a1a; /* Color de fondo oscuro para la barra lateral */
+    height: 100vh; /* Altura completa */
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.sidebar h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-item .nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.sidebar .nav-item .nav-link:hover {
+    background-color: #28a745; /* Color verde cuando se pasa el ratón */
+}
+
+/* Contenido principal */
+.container-fluid {
+    margin-left: 220px; /* Deja espacio para la barra lateral */
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Carrusel de apuestas destacadas */
+#highlightCarousel {
+    margin-bottom: 30px;
+}
+
+/* Asegura que los elementos dentro del carrusel se distribuyan horizontalmente */
+.carousel-inner {
+    display: flex; /* Distribuye los elementos en línea */
+    overflow: hidden; /* Oculta los elementos que no están visibles */
+}
+
+/* Estilo de las tarjetas dentro del carrusel */
+.carousel-item {
+    text-align: center;
+    flex: 0 0 100%; /* Asegura que cada item ocupe el 100% del ancho */
+}
+
+/* Asegura que las imágenes se ajusten correctamente sin deformarse */
+.carousel-item img {
+    object-fit: cover;
+    height: 400px; /* Fija la altura de las imágenes */
+    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+}
+
+/* Estilo de las tarjetas dentro del carrusel (contenedor) */
+.bet-card {
+    background-color: #f8f9fa; /* Fondo claro para las tarjetas */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para las tarjetas */
+}
+
+/* Estilo de los títulos dentro de las tarjetas */
+.bet-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilo de los párrafos dentro de las tarjetas */
+.bet-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Estilo del botón dentro de las tarjetas */
+.bet-card .btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo del botón al pasar el ratón */
+.bet-card .btn:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+/* Estilo para los indicadores del carrusel */
+.carousel-indicators button {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicators .active {
+    background-color: #28a745;
+}
+
+.carousel-indicators button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para las secciones adicionales de apuestas */
+#apuestas-en-vivo, #mis-apuestas, #historial, #bonos {
+    margin-top: 20px;
+}
+
+#apuestas-en-vivo h2,
+#mis-apuestas h2,
+#historial h2,
+#bonos h2 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+#apuestas-en-vivo p,
+#mis-apuestas p,
+#historial p,
+#bonos p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Container principal para las secciones */
+.container {
+    margin-top: 50px;
+}
+
+/* Estilo para cada tarjeta de sección */
+.section-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    color: #457b9d;
+}
+
+/* Configuración responsiva */
+@media (max-width: 767px) {
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+  

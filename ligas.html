@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para la página (UTF-8). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el diseño adaptable para dispositivos móviles. -->
+    <link rel="stylesheet" href="ligas.css"> <!-- Enlaza el archivo de estilos CSS para aplicar el diseño a la página. -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Ligas</title> <!-- Define el título de la página que aparece en la pestaña del navegador. -->
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="Imagenes Index/Logo Principal.png" alt="Logo" class="header-logo">
+        </a>
+        <h1>Ligas</h1>
+
+
+
+        
+
+         <!-- Menú para escritorio -->
+         <label for="menu-toggle" class="menu-icon d-md-none">&#9776;</label>
+         <nav class="d-none d-md-block">
+           <ul class="navbar d-flex list-unstyled mb-0">
+             <li><a href="ligas.html" class="nav-link text-light"><i class="fas fa-trophy"></i> Ligas</a></li>
+             <li><a href="equipos.html" class="nav-link text-light"><i class="fas fa-users"></i> Equipos</a></li>
+             <li><a href="partidos.html" class="nav-link text-light"><i class="fas fa-futbol"></i> Partidos</a></li>
+             <li><a href="contacto.html" class="nav-link text-light"><i class="fas fa-envelope"></i> Contacto</a></li>
+           </ul>
+         </nav>
+         
+         <!-- Menú desplegable para dispositivos móviles -->
+         <input type="checkbox" id="menu-toggle" class="menu-toggle d-md-none">
+         <nav id="mobile-nav" class="d-md-none">
+           <ul class="navbar list-unstyled ps-0">
+             <li><a href="ligas.html" class="nav-link text-dark"><i class="fas fa-trophy"></i> Ligas</a></li>
+             <li><a href="equipos.html" class="nav-link text-dark"><i class="fas fa-users"></i> Equipos</a></li>
+             <li><a href="partidos.html" class="nav-link text-dark"><i class="fas fa-futbol"></i> Partidos</a></li>
+             <li><a href="contacto.html" class="nav-link text-dark"><i class="fas fa-envelope"></i> Contacto</a></li>
+           </ul>
+         </nav>
+         
+         <!-- Agrega los iconos de Font Awesome (o cualquier librería de iconos a nuestra eleccion) -->
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+         
+    </header>
+
+    <div class="container py-5">
+        <!-- Carrusel de Ligas -->
+        <h2 class="text-center text-primary mb-5">Las Principales Ligas de Fútbol</h2>
+        <div id="ligasCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- La Liga -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card liga-card shadow-lg rounded-5 overflow-hidden position-relative">
+                                <img src="Imagenes Ligas/españa.png" class="card-img-top" alt="La Liga">
+                                <div class="card-body text-white p-4 position-absolute bottom-0 start-0 end-0">
+                                    <h3 class="card-title fs-3 fw-bold">La Liga (España)</h3>
+                                    <p class="card-text">La Liga es una de las ligas más importantes del mundo, hogar de clubes históricos como el Real Madrid y el FC Barcelona.</p>
+                                    <a href="#" class="btn btn-light rounded-pill">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Premier League -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card liga-card shadow-lg rounded-5 overflow-hidden position-relative">
+                                <img src="Imagenes Ligas/inglaterra.jpg" class="card-img-top" alt="Premier League">
+                                <div class="card-body text-white p-4 position-absolute bottom-0 start-0 end-0">
+                                    <h3 class="card-title fs-3 fw-bold">Premier League (Inglaterra)</h3>
+                                    <p class="card-text">La Premier League es conocida por su competitividad y la calidad de sus jugadores. Equipos como el Manchester United y el Liverpool son parte de esta liga.</p>
+                                    <a href="premier-league.html" class="btn btn-light rounded-pill">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Serie A -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card liga-card shadow-lg rounded-5 overflow-hidden position-relative">
+                                <img src="Imagenes Ligas/italia.png" class="card-img-top" alt="Serie A">
+                                <div class="card-body text-white p-4 position-absolute bottom-0 start-0 end-0">
+                                    <h3 class="card-title fs-3 fw-bold">Serie A (Italia)</h3>
+                                    <p class="card-text">La Serie A es famosa por su enfoque táctico y defensivo, siendo el hogar de equipos legendarios como la Juventus y el AC Milan.</p>
+                                    <a href="serie-a.html" class="btn btn-light rounded-pill">Ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Controles de navegación del carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#ligasCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#ligasCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        
+        <!-- Fila de Tarjetas debajo del carrusel -->
+        <div class="row g-4 mt-5">
+            <!-- La Liga -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card liga-card shadow-lg rounded-3 p-3 bg-lightblue">
+                    <img src="Imagenes Ligas/españa.png" class="card-img-top" alt="La Liga">
+                    <div class="card-body1">
+                        <h3 class="card-title text-center fs-4 text-dark">La Liga (España)</h3>
+                        <p class="card-text">La Liga es conocida por su rivalidad histórica entre el Real Madrid y el FC Barcelona, así como su influencia global.</p>
+                        <a href="#" class="btn btn-primary w-100 mt-3">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premier League -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card liga-card shadow-lg rounded-3 p-3 bg-lightgreen">
+                    <img src="Imagenes Ligas/inglaterra.jpg" class="card-img-top" alt="Premier League">
+                    <div class="card-body1">
+                        <h3 class="card-title text-center fs-4 text-dark">Premier League (Inglaterra)</h3>
+                        <p class="card-text">Conocida por su competitividad, la Premier League cuenta con equipos históricos como el Manchester United y el Liverpool.</p>
+                        <a href="premier-league.html" class="btn btn-primary w-100 mt-3">Ver más</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Serie A -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card liga-card shadow-lg rounded-3 p-3 bg-lightorange">
+                    <img src="Imagenes Ligas/italia.png" class="card-img-top" alt="Serie A">
+                    <div class="card-body1">
+                        <h3 class="card-title text-center fs-4 text-dark">Serie A (Italia)</h3>
+                        <p class="card-text">La Serie A es famosa por su defensa sólida y la presencia de equipos legendarios como la Juventus y el Inter de Milán.</p>
+                        <a href="serie-a.html" class="btn btn-primary w-100 mt-3">Ver más</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Agregar más tarjetas de ligas según sea necesario... -->
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-container">
+            <!-- Sección de Ubicación -->
+            <div class="map-section">
+                <h3>Ubicación</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.66780327867!2d2.0576163180956293!3d41.39263843524652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sco!4v1729113534119!5m2!1ses!2sco"
+                    width="100%" height="200" class="map-iframe" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+    
+            <!-- Sección de Redes Sociales -->
+            <div class="social-section">
+                <h3>Síguenos en Redes Sociales</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="bi bi-twitter"></i> Twitter</a>
+                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#" class="social-icon"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+    
+            <!-- Sección de Encuesta de Satisfacción -->
+            <div class="survey-container">
+                <h3>Encuesta de Satisfacción</h3>
+                <form class="survey-form">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="Ingresa tu correo" required>
+    
+                    <label for="feedback">Comentarios:</label>
+                    <textarea id="feedback" placeholder="Escribe tus comentarios aquí..." required></textarea>
+    
+                    <div class="subscription">
+                        <p>Quiero suscribirme para recibir novedades.</p>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="subscribe"> Sí, deseo suscribirme
+                        </label>
+                    </div>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+
+            </div>
+
+            
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-zE4Zc1AWFEXpDWf5fInY4qgJ2xXrNR7mPzNC7Oe2STcfwBqXGfu40bf1GVi1svwC" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+

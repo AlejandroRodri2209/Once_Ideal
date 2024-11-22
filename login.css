@@ -1,0 +1,159 @@
+/* Estilo general para el body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fondo animado con imágenes */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Añadir las clases con las imágenes de fondo */
+.background1 {
+    background-image: url('Imagenes_Login/Fondo1.jpg');
+}
+
+.background2 {
+    background-image: url('Imagenes_Login/Fondo2.jpg');
+}
+
+.background3 {
+    background-image: url('Imagenes_Login/Fondo3.jpg');
+}
+
+.background4 {
+    background-image: url('Imagenes_Login/Fondo4.jpg');
+}
+
+/* Contenedor del formulario */
+.login-container {
+    position: relative;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Asegura que el formulario esté sobre el fondo */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #457B9D; /* Color atractivo para el título */
+}
+
+/* Estilo para los inputs */
+.form-group {
+    margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Clase base para propiedades comunes de los botones */
+.btn {
+    padding: 12px;
+    font-size: 16px; /* Tamaño consistente */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Eliminar subrayado */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo al pasar el mouse */
+.btn:hover {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+}
+
+/* Específico para el botón principal */
+.btn-block {
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.container{
+    text-align: center;
+}
+/* Específico para el botón de volver */
+.btn-back {
+    margin-top: 15px;
+    padding: 10px 20px; /* Ajuste en padding */
+    font-size: 14px; /* Tamaño de fuente ligeramente menor */
+}
+
+
+/* Estilo para el texto central */
+.text-center {
+    text-align: center;
+}
+
+.text-center a {
+    color: #457B9D;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 1.6em;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .btn-block {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .login-container h2 {
+        font-size: 1.4em;
+    }
+
+    .form-group input {
+        font-size: 12px;
+    }
+
+    .btn-block {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="equipos.css">
+    <title>Equipos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <a href="index.html">
+            <img src="Imagenes Index/Logo Principal.png" alt="Logo" class="header-logo">
+        </a>
+        <h1>Equipos</h1>
+
+     
+        
+
+         <!-- Menú para escritorio -->
+         <label for="menu-toggle" class="menu-icon d-md-none">&#9776;</label>
+         <nav class="d-none d-md-block">
+           <ul class="navbar d-flex list-unstyled mb-0">
+             <li><a href="ligas.html" class="nav-link text-light"><i class="fas fa-trophy"></i> Ligas</a></li>
+             <li><a href="equipos.html" class="nav-link text-light"><i class="fas fa-users"></i> Equipos</a></li>
+             <li><a href="partidos.html" class="nav-link text-light"><i class="fas fa-futbol"></i> Partidos</a></li>
+             <li><a href="contacto.html" class="nav-link text-light"><i class="fas fa-envelope"></i> Contacto</a></li>
+           </ul>
+         </nav>
+         
+         <!-- Menú desplegable para dispositivos móviles -->
+         <input type="checkbox" id="menu-toggle" class="menu-toggle d-md-none">
+         <nav id="mobile-nav" class="d-md-none">
+           <ul class="navbar list-unstyled ps-0">
+             <li><a href="ligas.html" class="nav-link text-dark"><i class="fas fa-trophy"></i> Ligas</a></li>
+             <li><a href="equipos.html" class="nav-link text-dark"><i class="fas fa-users"></i> Equipos</a></li>
+             <li><a href="partidos.html" class="nav-link text-dark"><i class="fas fa-futbol"></i> Partidos</a></li>
+             <li><a href="contacto.html" class="nav-link text-dark"><i class="fas fa-envelope"></i> Contacto</a></li>
+           </ul>
+         </nav>
+         
+         <!-- Agrega los iconos de Font Awesome (o cualquier librería de iconos a nuestra eleccion) -->
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </header>
+
+    <div class="container py-5">
+        <h2>Equipos Más Destacados</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- FC Barcelona -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/barcelona.jpg" class="card-img-top" alt="FC Barcelona">
+                    <div class="card-body">
+                        <h3 class="card-title">FC Barcelona</h3>
+                        <p class="card-text">Uno de los clubes más exitosos de España y del mundo, conocido por su estilo de juego ofensivo y sus numerosas victorias en competiciones europeas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Madrid -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/real madrid.png" class="card-img-top" alt="Real Madrid">
+                    <div class="card-body">
+                        <h3 class="card-title">Real Madrid</h3>
+                        <p class="card-text">Conocido por su rica historia y éxitos tanto en La Liga como en la Liga de Campeones, el Real Madrid es un gigante del fútbol mundial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manchester City -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/manchester city.png" class="card-img-top" alt="Manchester City">
+                    <div class="card-body">
+                        <h3 class="card-title">Manchester City</h3>
+                        <p class="card-text">Uno de los equipos más populares de Inglaterra, con una gran cantidad de trofeos y una rica historia en la Premier League y competiciones europeas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bayern Munich -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/bayern munich.png" class="card-img-top" alt="Bayern Munich">
+                    <div class="card-body">
+                        <h3 class="card-title">Bayern Munich</h3>
+                        <p class="card-text">El equipo más exitoso de Alemania, conocido por su impresionante rendimiento en la Bundesliga y en la Liga de Campeones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juventus -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/juventus.png" class="card-img-top" alt="Juventus">
+                    <div class="card-body">
+                        <h3 class="card-title">Juventus</h3>
+                        <p class="card-text">El club más laureado de Italia, con múltiples títulos de Serie A y una fuerte presencia en competiciones europeas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Millonarios -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/millonarios.jpg" class="card-img-top" alt="Millonarios">
+                    <div class="card-body">
+                        <h3 class="card-title">Millonarios</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem nam voluptatibus voluptate ipsum repellendus!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fluminense -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/fluminense.png" class="card-img-top" alt="Fluminense">
+                    <div class="card-body">
+                        <h3 class="card-title">Fluminense</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem nam voluptatibus voluptate ipsum repellendus!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PSG -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/psg.png" class="card-img-top" alt="Paris Saint-Germain (PSG)">
+                    <div class="card-body">
+                        <h3 class="card-title">Paris Saint-Germain (PSG)</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem nam voluptatibus voluptate ipsum repellendus!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- River Plate -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="Imagenes Equipos/river-plate.png" class="card-img-top" alt="River Plate">
+                    <div class="card-body">
+                        <h3 class="card-title">River Plate</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem nam voluptatibus voluptate ipsum repellendus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Ubicación</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.66780327867!2d2.0576163180956293!3d41.39263843524652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sco!4v1729113534119!5m2!1ses!2sco"
+                        width="100%" height="200" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-md-4">
+                    <h3>Síguenos en Redes Sociales</h3>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i> Twitter</a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i> Instagram</a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Encuesta de Satisfacción</h3>
+                    <form class="survey-form">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="feedback" class="form-label">Comentarios:</label>
+                            <textarea class="form-control" id="feedback" placeholder="Escribe tus comentarios aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HYuhneH1wE5qVDav7jlPbT7e7bWgY/BuZTxyDp+AxMHx6G7hv70G6nDkE8D3rZ2Q" crossorigin="anonymous"></script>
+</body>
+
+</html>
+}
